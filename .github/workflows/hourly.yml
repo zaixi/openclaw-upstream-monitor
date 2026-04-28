@@ -1,0 +1,12 @@
+name: Hourly Trigger
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hourly trigger
+        run: echo "Triggered at $(date)"
